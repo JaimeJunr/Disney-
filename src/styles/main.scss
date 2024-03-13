@@ -4,6 +4,7 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
 
 
 @font-face{
@@ -73,6 +74,10 @@ body{
 
 .title--small{
     @include title(28px)
+}
+
+.list{
+    list-style:circle;
 }
 
 .button{

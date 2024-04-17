@@ -6,6 +6,7 @@
     margin-bottom: 24px;
   }
 
+<<<<<<< HEAD
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -28,6 +29,38 @@
     &__list {
       display: flex;
       flex-direction: column;
+=======
+    &__list{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @media (max-width:768px) {
+            gap: 12px;           
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        &__item{
+            text-align: center;
+
+            h4{
+                margin-top: 24px;
+                margin-bottom: 24px;
+                @media (max-width:768px){
+                    title--small
+                }
+            }
+
+            img{    
+                max-width: 100%;
+            }
+
+            ul{
+                list-style: none;
+            }
+        }
+>>>>>>> 063950bddf8a6f74f9d482dd4deecb5e07aa0f6f
     }
   }
 }

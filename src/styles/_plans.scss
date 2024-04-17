@@ -15,11 +15,44 @@
       max-width: 380px;
       width: 100%;
 
+<<<<<<< HEAD
       &:nth-child(2) {
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url(../images/fundo_combo_plus.png);
       }
+=======
+    &__list{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        
+        @media (max-width:768px){
+            display: block;
+        }
+        
+        &__item{
+            text-align: center;
+            padding: 60px 44px 44px;
+            max-width: 380px;
+            width: 100%;
+
+            &:nth-child(2){
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../images/fundo_combo_plus.png);
+            }
+
+            img{
+                height: 83px;
+            }
+
+            strong{
+                display: block;
+                margin-top: 24px;
+            }
+>>>>>>> 063950bddf8a6f74f9d482dd4deecb5e07aa0f6f
 
       img {
         height: 83px;

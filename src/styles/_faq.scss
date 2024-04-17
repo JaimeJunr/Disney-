@@ -8,12 +8,13 @@
     }
 
     &__questions{
+        list-style: none;
+        
         &__item{
             background-color: #13151d;
-
             margin-top: 24px;
 
-            &__question{
+            &__question{                
                 color: var.$TextColorSecon;
                 font-size: 20px;
                 display: block;
@@ -38,6 +39,16 @@
                 overflow: hidden;
                 transition: height, .5s ease;
                 padding: 0 24px;
+
+                .list{
+                    margin-top: 8px;
+                    margin-left: 48px;
+                    list-style: disc;
+
+                    &__item{
+                        padding: 8px;
+                    }
+                }
             }
 
             &--is-open{

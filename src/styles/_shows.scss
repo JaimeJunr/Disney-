@@ -33,6 +33,7 @@
       display: grid;
     }
 
+<<<<<<< HEAD
     &__item {
       img {
         max-width: 100%;
@@ -40,6 +41,15 @@
       }
     }
   }
+=======
+        @media (max-width:768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &--is-active{
+            display: grid;
+        }
+>>>>>>> 063950bddf8a6f74f9d482dd4deecb5e07aa0f6f
 
   @media (min-height: 769px) {
     &__list {

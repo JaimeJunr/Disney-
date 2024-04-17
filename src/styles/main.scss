@@ -1,134 +1,146 @@
-@use 'var';
-@use 'hero';
-@use 'shows';
-@use 'plans';
-@use 'available-devices';
-@use 'faq';
-@use 'footer';
+@use "var";
+@use "hero";
+@use "shows";
+@use "plans";
+@use "available-devices";
+@use "faq";
+@use "footer";
 
-
-@font-face{
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
-    font-weight: 400;
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/Avenir-Regular.woff2);
+  font-weight: 400;
 }
 
-@font-face{
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Bold.woff2);
-    font-weight: 700;
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/Avenir-Bold.woff2);
+  font-weight: 700;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Avenir, sans-serif;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir, sans-serif;
+  list-style: none;
 }
 
-
-
-body{
-    background-color: var.$backgroundColor;
+body {
+  background-color: var.$backgroundColor;
 }
 
 @mixin text($fontSize: 16px) {
-    font-size: $fontSize;
-    line-height: $fontSize + 10px;
-    color: var.$TextColorPrinc;
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: var.$TextColorPrinc;
 }
 
 @mixin title($fontSize: 40px) {
-    @include text($fontSize);
-    color: var.$TextColorSecon;
-
+  @include text($fontSize);
+  color: var.$TextColorSecon;
 }
 
-
 .text--big {
-    @include text(18px);
+  @include text(18px);
 }
 
 .text {
-    @include text;
+  @include text;
 }
 
-.text--small{
-    @include text(12px);
+.text--small {
+  @include text(12px);
 }
 
 .link-text {
-    @include text(18px);
-    color: var.$TextColorSecon;
-    text-decoration: underline;
+  @include text(18px);
+  color: var.$TextColorSecon;
+  text-decoration: underline;
 }
 
-.title--big{
-    @include title(44px)
+.title--big {
+  @include title(44px);
 }
 
-.title{
-    @include title;
+.title {
+  @include title;
 }
 
-.title--small{
-    @include title(28px)
+.title--small {
+  @include title(28px);
 }
 
-.list{
-    list-style:circle;
+.list {
+  list-style: circle;
 }
 
-.button{
+.button {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: var.$TextColorSecon;
+  background-color: #6421ff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 2vw;
+  margin-bottom: 8px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.img-text-section {
+  padding: 5.6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  &__text_container {
+    padding: 0 2vw;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--image-full-width {
+    display: block;
+    position: relative;
+    img {
+      width: 100%;
+    }
+
+    &__text_container {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      left: 50%;
+      width: calc(50% - 5.6vw);
+    }
+  }
+  @media (max-height: 769px) {
+    grid-template-columns: 1fr;
+
+    &--image-full-width {
+      display: block;
+      position: relative;
+      img {
+        width: 100%;
+      }
+
+      &__text_container {
+        position: static;
         display: block;
         width: 100%;
-        height: 60px;
-        font-size: 18px;
-        color: var.$TextColorSecon;
-        background-color: #6421ff;
-        text-transform: uppercase;
-        border-radius: 4px;
-        margin-top: 2vw;
-        margin-bottom: 8px;
-        border: transparent;
-        cursor: pointer;
-}
-
-.img-text-section{
-    padding: 5.6vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-
-    img{
-        max-width: 100%;
+      }
     }
-
-    &__text_container{
-        padding: 0 2vw;
-
-        h2{
-            margin-bottom: 24px;
-        }
-    }
-
-    &--image-full-width{
-        display: block;
-        position: relative;
-        img{
-            width: 100%;
-        }
-
-        &__text_container{
-            position: absolute;
-            top: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            left: 50%;
-            width: calc(50% - 5.6vw);
-        }
-    }
+  }
 }

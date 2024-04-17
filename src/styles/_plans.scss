@@ -1,42 +1,65 @@
 .plans {
-    padding: 5.6vw;
+  h2 {
+    text-align: center;
+  }
 
+  &__list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 
-    h2{
-        text-align: center;
+    &__item {
+      text-align: center;
+      padding: 60px 44px 44px;
+      max-width: 380px;
+      width: 100%;
+
+      &:nth-child(2) {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../images/fundo_combo_plus.png);
+      }
+
+      img {
+        height: 83px;
+      }
+
+      strong {
+        display: block;
+        margin-top: 24px;
+      }
     }
+  }
 
-    &__list{
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        
-        &__item{
-            text-align: center;
-            padding: 60px 44px 44px;
-            max-width: 380px;
-            width: 100%;
+  p {
+    text-align: center;
+  }
 
-            &:nth-child(2){
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-image: url(../images/fundo_combo_plus.png);
-            }
+  @media (max-height: 769px) {
+    &__list {
+      flex-direction: column;
+      &__item {
+        text-align: center;
+        padding: 60px 44px 44px;
+        max-width: 100%;
+        width: 100%;
 
-            img{
-                height: 83px;
-            }
-
-            strong{
-                display: block;
-                margin-top: 24px;
-            }
-
+        &:nth-child(2) {
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(../images/fundo_combo_plus.png);
         }
-    }
 
-    p{
-        text-align: center;
+        img {
+          height: 100px;
+        }
+
+        strong {
+          display: block;
+          margin-top: 24px;
+        }
+      }
     }
+  }
 }

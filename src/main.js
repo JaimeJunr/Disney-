@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.querySelector('.hero');
     const heightHero = heroSection.clientHeight;
 
+
+        
+ 
+    
+    
+
     //Header
     window.addEventListener('scroll', function(){
 
@@ -42,9 +48,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.target.classList.add('show__tabs__button--is-active');
             })
         }
-    })
+})
 
-    
+
+var image = document.getElementById("imageAlt"); 
+var width = screen.width;
+
+
+if (width <= 768){
+    image.src = './dist/images/fundo_rei_leao_celular.png';
+}if (width > 768) image.src = './dist/images/fundo_rei_leao.png';
+
+
+
+
 
 function  hiddenHeader(){
     const header = document.querySelector('header');
